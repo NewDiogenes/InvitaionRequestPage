@@ -2,18 +2,46 @@
   "name": "invitation-request-page",
   "version": "1.0.0",
   "description": "A webpage to allow users to sign up/request an invitiation for a yt to be completed service",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage",
+    "test:dev": "npm run test -- --watchAll",
+    "start": "webpack-dev-server",
+    "lint": "eslint ./src ./webpack.config.js -f table --ext *.js --ext *.jsx",
+    "lint:fix": "npm run lint -- --fix",
+    "precommit": "npm run test && npm run lint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NewDiogenes/InvitaionRequestPage.git"
   },
-  "author": "AlexMitchem\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+  "author": "Alex Mitchem",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NewDiogenes/InvitaionRequestPage/issues"
   },
-  "homepage": "https://github.com/NewDiogenes/InvitaionRequestPage#readme"
+  "homepage": "https://github.com/NewDiogenes/InvitaionRequestPage#readme",
+  "dependencies": {
+    "enzyme": "^3.1.1",
+    "styled-components": "^2.2.3",
+    "react": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.10.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
+    "jest-enzyme": "^4.0.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
 }
