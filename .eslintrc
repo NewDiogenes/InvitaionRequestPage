@@ -1,0 +1,42 @@
+{
+  "extends": "eslint-config-airbnb",
+  "parser":"babel-eslint",
+  "settings": {
+    "ecmascript": 6
+  },
+  "env":{
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "arrow-body-style": "off",
+    "arrow-parens": ["error", "always"],
+    "class-methods-use-this": "off",
+    "func-names": "off",
+    "indent": ["warn", 2],
+    "indent-legacy": "off",
+    "max-len": ["error", 120],
+    "new-cap": "warn",
+    "no-plusplus": "off",
+    "no-return-assign": "error",
+    "quote-props": "off",
+    "template-curly-spacing": [2, "always"],
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }],
+    "jsx-quotes": [1, "prefer-single"],
+    "react/forbid-prop-types": "error",
+    "react/jsx-curly-spacing": [2, "always"],
+    "react/jsx-filename-extension": "off",
+    "react/jsx-boolean-value": "off",
+    "react/prefer-stateless-function": [ "error", { "ignorePureComponents": true } ],
+    "import/extensions": "error",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "import/no-unresolved": "error",
+    "import/prefer-default-export": "off"
+  }
+}
