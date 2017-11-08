@@ -1,0 +1,19 @@
+{
+  "name": "invitation-request-page",
+  "version": "1.0.0",
+  "description": "A webpage to allow users to sign up/request an invitiation for a yt to be completed service",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NewDiogenes/InvitaionRequestPage.git"
+  },
+  "author": "AlexMitchem\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NewDiogenes/InvitaionRequestPage/issues"
+  },
+  "homepage": "https://github.com/NewDiogenes/InvitaionRequestPage#readme"
+}
