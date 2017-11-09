@@ -23,25 +23,37 @@ const rules = [
   {
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-    },
+    loader: 'babel-loader',
+  },
+  {
+    test: /\.css$/,
+    use: [
+      { loader: 'style-loader', options: { sourceMap: true } },
+      { loader: 'css-loader', options: { sourceMap: true } },
+    ],
+  },
+  {
+    test: /\.(eot|svg|ttf|woff|woff2)$/,
+    loader: 'file-loader',
   },
 ];
 
 module.exports = {
   devtool: 'source-map',
-  context: sourcePath,
-  entry: {
-    js: './index.js',
-  },
+  entry: ['babel-polyfill', path.join(sourcePath, './index.js')],
   output: {
     path: buildPath,
     publicPath: '/',
-    filename: '[name].js',
   },
   module: {
     rules,
+  },
+  resolve: {
+    extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx'],
+    modules: [
+      path.resolve(__dirname, 'node_modules'),
+      sourcePath,
+    ],
   },
   plugins,
 };
