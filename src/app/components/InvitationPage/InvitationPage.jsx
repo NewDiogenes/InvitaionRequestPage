@@ -1,7 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
-const InvitationPage = () => (
-  <div />
+export const InvitationPageComponent = ({ showInviteForm }) => (
+  <div>
+    <button id='showInviteFormButton' onClick={ showInviteForm } />
+  </div>
 );
 
-export default InvitationPage;
+InvitationPageComponent.propTypes = {
+  showInviteForm: PropTypes.func.isRequired,
+};
+
+export default styled(InvitationPageComponent)`
+`;
