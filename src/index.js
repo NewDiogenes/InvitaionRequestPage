@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './app';
-import InvitationPage from './app/components/InvitationPage/InvitationPage';
+import InvitationPage from './app/containers/InvitationPageContainer';
 
 const pages = [
   {

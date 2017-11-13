@@ -1,15 +1,15 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { InvitationPageComp } from './InvitationPage';
+import { InvitationPageComponent } from './InvitationPage';
 
 describe('InvitationPageComp', () => {
   let invitationPageComp;
   let testProps;
   beforeEach(() => {
-    invitationPageComp = mount(<InvitationPageComp />);
     testProps = {
       showInviteForm: jest.fn(),
     };
+    invitationPageComp = mount(<InvitationPageComponent { ...testProps } />);
   });
 
   describe('the showInviteFormButton', () => {

@@ -4,11 +4,13 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
+import inviteReducer from './reducers/inviteReducer';
 
 const reducers = combineReducers({
+  invite: inviteReducer,
 });
 
-export const store = createStore(reducers);
+const store = createStore(reducers);
 
 const Watch = ({ pages }) => (
   <Provider store={ store } >
@@ -16,7 +18,7 @@ const Watch = ({ pages }) => (
       <Layout>
         <Switch>
           {pages.map((page) =>
-            <Route exact path={ page.path } component={ page.component } />)}
+            <Route key={ page.path } exact path={ page.path } component={ page.component } />)}
         </Switch>
       </Layout>
     </BrowserRouter>

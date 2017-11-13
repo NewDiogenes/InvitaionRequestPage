@@ -17,7 +17,5 @@ export default styled(TitleBarComponent)`
 background-color: lightSlateGrey;
 color: white;
 font-size: 3em;
-text-align: center;
-padding: 0.2em;
-width: 100%;
+padding: 0.2em 5%;
 `;

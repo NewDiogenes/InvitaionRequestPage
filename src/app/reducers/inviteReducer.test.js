@@ -10,7 +10,7 @@ describe('inviteReducer', () => {
 
   describe('the default state', () => {
     it('has state.showInviteFOrm as false', () => {
-      expect(inviteReducer(undefined, {})).toMatchObject({ showInviteForm: false });
+      expect(inviteReducer(undefined, {})).toMatchObject({ invitePopupVisible: false });
     });
   });
 
@@ -22,7 +22,7 @@ describe('inviteReducer', () => {
 
   describe('When reducing a SHOW_INVITE_FORM action', () => {
     it('sets state.showInviteForm to true', () => {
-      expect(inviteReducer(testState, showInviteForm())).toMatchObject({ showInviteForm: true });
+      expect(inviteReducer(testState, showInviteForm())).toMatchObject({ invitePopupVisible: true });
     });
   });
 });
